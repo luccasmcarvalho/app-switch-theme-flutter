@@ -23,6 +23,10 @@ final _darktheme = ThemeData(
   textSelectionTheme: TextSelectionThemeData(selectionColor: Colors.white),
 );
 
+final _iconDarkMode = Icon(Icons.light_mode_rounded);
+
+final _iconLightMode = Icon(Icons.mode_night_sharp);
+
 class _MyAppState extends State<MyApp> {
   bool _swValue = false;
   @override
@@ -33,15 +37,16 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           actions: [
-            Switch(
-                value: _swValue,
-                activeColor: Colors.green[700],
-                activeTrackColor: Colors.blueAccent[800],
-                onChanged: (nwValue) {
+            IconButton(
+                onPressed: () {
                   setState(() {
-                    _swValue = nwValue;
+                    _swValue = !_swValue;
                   });
-                }),
+                },
+                icon: _swValue ? _iconLightMode : _iconDarkMode ,
+                tooltip:
+                    _swValue ? 'Ativar modo escuro' : 'Ativar modo claro',
+              ),
           ],
         ),
         body: Center(
