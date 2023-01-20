@@ -1,3 +1,3 @@
 # App Switch Theme Flutter
 
-Aqui está somente a base de como modificar o tema do flutter, somente entre os modos claro e escuro 
+Projeto de página base de aplicação com troca de modo para ser utilizado ou modificado, com o intuíto de possuir com a realização da troca de tema da aplicação para claro e escuro.
